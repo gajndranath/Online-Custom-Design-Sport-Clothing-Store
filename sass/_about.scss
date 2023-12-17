@@ -6,7 +6,7 @@
         height: 200px;
         top: -15%;
         left: -5.5%;
-        background-image: url(/assets/icon/Untitled_design_\(3\)-q3mpFtbPE-transformed.png);
+        background-image: url(./assets/icon/Untitled_design_\(3\)-q3mpFtbPE-transformed.png);
         @include background-image(contain);
         width: 200px;
     }
@@ -16,7 +16,7 @@
         height: 100px;
         top: -2%;
         right: -50px;
-        background-image: url(/assets/icon/Untitled_design_\(1\)-zoTltuyX_-transformed.png);
+        background-image: url(./assets/icon/Untitled_design_\(1\)-zoTltuyX_-transformed.png);
         @include background-image(contain);
         width: 200px;
     }
@@ -38,7 +38,7 @@
           bottom: 23%;
           left: 0;
           position: absolute;
-          background-image: url(/assets/icon/heading-paint-2.png);
+          background-image: url(./assets/icon/heading-paint-2.png);
           @include background-image(cover);
   
           &:hover > span:hover {
@@ -69,7 +69,7 @@
             padding: 1rem;
             top: 2%;
             left: -2%;
-            background-image: url(/assets/icon/Untitled_design_\(4\)-BAnpqCyRR-transformed.png);
+            background-image: url(./assets/icon/Untitled_design_\(4\)-BAnpqCyRR-transformed.png);
             @include background-image(cover);
         }   
         &::after{
@@ -79,7 +79,7 @@
             height: 100px;
             top: -7%;
             right: -11%;
-            background-image: url(/assets/icon/Untitled_design_\(2\)-tBWkTBdzis-transformed.png);
+            background-image: url(./assets/icon/Untitled_design_\(2\)-tBWkTBdzis-transformed.png);
             @include background-image(contain);
         }
         .about-img {
@@ -167,7 +167,7 @@
         bottom: -95px;
         right: 0%;
         rotate: 90deg;
-        background-image: url(/assets/icon/Untitled_design_\(3\)-q3mpFtbPE-transformed.png);
+        background-image: url(./assets/icon/Untitled_design_\(3\)-q3mpFtbPE-transformed.png);
         @include background-image(contain);
         mix-blend-mode: difference;
         width: 200px;
@@ -178,7 +178,7 @@
         height: 100px;
         bottom: 10%;
         left: -25px;
-        background-image: url(/assets/icon/Untitled_design_\(1\)-zoTltuyX_-transformed.png);
+        background-image: url(./assets/icon/Untitled_design_\(1\)-zoTltuyX_-transformed.png);
         @include background-image(contain);
         width: 200px;
     }
