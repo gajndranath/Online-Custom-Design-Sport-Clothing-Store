@@ -1,0 +1,38 @@
+.box {
+    position: absolute;
+    width: 27vw;
+    top: 45%;
+    left: 64%;
+    transform: translate(-50%, -50%);
+    z-index: -3;
+    height: 27vw;
+    border-radius: 50%;
+    background-color: $accent-400;
+  }
+  
+  .pattern {
+    background: repeating-linear-gradient(
+      135deg,
+      #000000 0,
+      #000000 10%,
+      transparent 0,
+      transparent 50%
+    );
+    background-size: 0.2em 0.2em;
+    opacity: 1;
+  }
+  
+  .custom-shape-divider-top-1696340859 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2;
+    -moz-transform: scale(-1, -1);
+    -o-transform: scale(-1, -1);
+    -webkit-transform: scale(-1, -1);
+    transform: scale(-1, -1);
+  }
+  

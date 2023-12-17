@@ -1,0 +1,163 @@
+/* Reset box-sizing and margin/padding to be consistent */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply smoother scrolling behavior */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Remove default list styles for ul and ol elements */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Remove default margin for various elements */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  // background-color: black;
+  background: rgb(26, 31, 43);
+  background: radial-gradient(
+    circle,
+    rgba(26, 31, 43, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  text-rendering: optimizeSpeed;
+  font-size: $font-size-base;
+  font-family: "poppins", sans-serif;
+  overflow-x: hidden;
+  // background-color: $bg-100;
+  -webkit-font-smoothing: antialiased;
+  min-block-size: 100%;
+  line-height: 1.2;
+}
+
+/* Remove default underline for anchor tags */
+a {
+  text-decoration: none;
+  color: $text-100;
+}
+
+/* Make media elements responsive */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  width: 100%;
+  display: block;
+}
+
+/* Remove spacing between table cells */
+table {
+  border-collapse: collapse;
+}
+
+/* Reset user-select for input and textarea elements */
+input,
+textarea {
+  user-select: auto;
+}
+
+/* Ensure textareas resize vertically */
+textarea {
+  resize: vertical;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Improve readability and wrapping for text elements */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Improve styling for meter elements */
+meter {
+  appearance: auto;
+}
+
+/* Remove default text opacity of input placeholder */
+::placeholder {
+  opacity: 1;
+}
+
+/* Reset default marker (•) */
+::marker {
+  content: "";
+}
+
+/* Hide elements with the 'hidden' attribute */
+[hidden] {
+  display: none;
+}
+
+/* Apply user-drag for draggable elements */
+[draggable="true"] {
+  -webkit-user-drag: element;
+}
+
+/* Reset native behavior for modal dialogs */
+dialog:modal {
+  all: initial;
+}
+
+/* Disable animations and transitions for reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Smooth scrolling for users without reduced motion preference */
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Animate focus outline for better accessibility */
+@media (prefers-reduced-motion: no-preference) {
+  :focus-visible {
+    transition: outline-offset 0.145s cubic-bezier(0.25, 0, 0.4, 1);
+  }
+}
+:focus-visible {
+  outline-offset: 5px;
+}

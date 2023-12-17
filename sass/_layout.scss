@@ -1,0 +1,18 @@
+@mixin container ($width){
+    width: $width + px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.container{
+    @include container(1280);
+}
+
+
+.inner-container {
+    @include container(860);
+}
+
+.inner-padding{
+    padding: .5rem 1rem;
+}

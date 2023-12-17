@@ -1,0 +1,188 @@
+.about {
+    background-color: black;
+    .abstract-dot-top-left{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: -15%;
+        left: -5.5%;
+        background-image: url(/assets/icon/Untitled_design_\(3\)-q3mpFtbPE-transformed.png);
+        @include background-image(contain);
+        width: 200px;
+    }
+
+    .abstract-arrows-top-right{
+        position: absolute;
+        height: 100px;
+        top: -2%;
+        right: -50px;
+        background-image: url(/assets/icon/Untitled_design_\(1\)-zoTltuyX_-transformed.png);
+        @include background-image(contain);
+        width: 200px;
+    }
+    .inner-about {
+      // background-color: red;
+      padding: 1rem;
+  
+      .about-heading {
+        position: relative;
+        color: $text-100;
+        font-size: $font-size-h1;
+        padding: 1rem;
+        z-index: 2;
+        &::after {
+          content: "";
+          width: 100%;
+          padding: 0.5rem;
+          z-index: -1;
+          bottom: 23%;
+          left: 0;
+          position: absolute;
+          background-image: url(/assets/icon/heading-paint-2.png);
+          @include background-image(cover);
+  
+          &:hover > span:hover {
+            // -webkit-text-stroke: 0px #bd1235;
+            color: $accent-400;
+          }
+        }
+        span {
+          -webkit-text-stroke: 1px white;
+          color: black;
+  
+          &:hover {
+            // -webkit-text-stroke: 0px #bd1235;
+            color: $accent-400;
+          }
+        }
+      }
+
+      .about-image{
+        position: relative;
+        @include pointer();
+        margin-top: 3rem;
+
+        &::before{
+            position: absolute;
+            content: '';
+            height: 500px;
+            padding: 1rem;
+            top: 2%;
+            left: -2%;
+            background-image: url(/assets/icon/Untitled_design_\(4\)-BAnpqCyRR-transformed.png);
+            @include background-image(cover);
+        }   
+        &::after{
+            position: absolute;
+            content: '';
+            width: 200px;
+            height: 100px;
+            top: -7%;
+            right: -11%;
+            background-image: url(/assets/icon/Untitled_design_\(2\)-tBWkTBdzis-transformed.png);
+            @include background-image(contain);
+        }
+        .about-img {
+            position: relative;
+            z-index: 1;
+            max-width: 100%;
+               padding: 1rem;
+          }
+        .cricle-text{
+            top: 55%;
+            @include pointer();
+            right: 1%;
+            position: absolute;
+            & span{
+                position: absolute;
+                color: $accent-400;
+                font-size: calc(#{$font-size-base} - .5rem);
+                font-weight: 600;
+                z-index: 3;
+                text-transform: uppercase;
+                transform-origin: 0 75px;
+                animation: rotate 5s linear infinite;
+            }
+
+            @keyframes rotate {
+                 0%{
+                    rotate: (0);
+                }
+
+                100%{
+                    rotate: (360deg);
+                }
+            }
+        }  
+
+      }
+  
+      .about-content {
+        @include pointer();
+        width: 80%;
+        gap: 4rem;
+        margin-bottom: 4rem;
+        color: $text-100;
+        // background-color: red;
+        .left-content {
+        
+          text-align: left;
+          font-size: calc(#{$font-size-small} - .3rem);
+          font-weight: 300;
+        }
+
+        .right-content{
+            // background-color: blue;
+            text-transform: uppercase;
+            font-size: calc(#{$font-size-small} - .3rem);
+            .time-content{
+                gap: .5rem;
+                .date{
+                    // background-color: blue;
+                    color: $accent-400;
+                    font-weight: 800;
+                    font-size: $font-size-h2;
+                    span{
+                        color: $text-100;
+                        vertical-align: middle;
+                        font-size: calc(#{$font-size-small} - .3rem);
+                    }
+                }
+
+                .time {
+                    // background-color: green;
+                    div:first-child{
+                        margin-bottom: .1rem;
+                        // background-color: gold;
+                    }
+                }
+            }
+        }
+      }
+    }
+    .abstract-dot-bottom-right{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        bottom: -95px;
+        right: 0%;
+        rotate: 90deg;
+        background-image: url(/assets/icon/Untitled_design_\(3\)-q3mpFtbPE-transformed.png);
+        @include background-image(contain);
+        mix-blend-mode: difference;
+        width: 200px;
+    }
+
+    .abstract-arrows-bottom-left{
+        position: absolute;
+        height: 100px;
+        bottom: 10%;
+        left: -25px;
+        background-image: url(/assets/icon/Untitled_design_\(1\)-zoTltuyX_-transformed.png);
+        @include background-image(contain);
+        width: 200px;
+    }
+  }
+  
+
+  

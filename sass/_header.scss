@@ -1,0 +1,230 @@
+@mixin hover {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+@mixin transition-hover {
+  transition: outline-offset 0.145s cubic-bezier(0.25, 0, 0.4, 1);
+}
+.primary-header {
+  // background: rgb(26,31,43);
+  // background: radial-gradient(circle, rgba(26,31,43,1) 0%, rgba(0,0,0,1) 100%);
+  // background-color: $bg-100;
+  position: relative;
+  z-index: 3;
+  .inner-header {
+    max-width: 100%;
+    flex-wrap: wrap;
+    height: 80px;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .brand a {
+      font-size: $font-size-base;
+      text-transform: uppercase;
+    }
+
+    .nav-bar {
+      gap: 2rem;
+
+      a {
+        font-size: $font-size-small;
+        display: block;
+
+        &:hover {
+          color: $accent-400;
+        }
+      }
+    }
+
+    .side-menu {
+      gap: 2rem;
+      border: none;
+
+      i {
+        font-size: $font-size-small;
+        color: white;
+      }
+      .menu-bar span {
+        font-size: 0.8rem;
+        color: $text-100;
+        text-transform: lowercase;
+      }
+      .cart {
+        background-color: $accent-400;
+        border-radius: 50%;
+        outline: 0;
+        margin: 0;
+        padding: 0.5rem 0.55rem;
+        @include transition-hover();
+
+        &:hover {
+          @include hover();
+        }
+      }
+    }
+  }
+
+  .hero-section {
+    position: relative;
+    gap: 1rem;
+    max-width: 100%;
+    // background-color: blue;
+
+    .main-content {
+      position: relative;
+      // background-color: aqua;
+      padding: 0.5rem;
+      z-index: 2;
+      flex: 2.5;
+
+      h1 {
+        font-family: "Nunito sans", sans-serif;
+        font-size: $font-size-h2;
+        font-weight: 500;
+        line-height: 1.2;
+        padding: 0.5rem 0;
+        color: $text-100;
+
+        .highlight {
+          color: $accent-400;
+          font-weight: 700;
+        }
+      }
+
+      .paragrapgh {
+        font-family: "poppins", sans-serif;
+        color: $text-200;
+        padding: 0.2rem 0;
+        font-size: $font-size-small;
+      }
+
+      .Shop-btn {
+        color: $text-100;
+        cursor: pointer;
+        font-family: "poppins", sans-serif;
+        font-weight: bold;
+        margin: 1.8rem 0;
+        text-transform: uppercase;
+
+        &:hover > .arrow {
+          color: $accent-400;
+          transform: translateX(10px);
+        }
+
+        &:not(:hover) > i {
+          transform: translateX(0);
+        }
+      }
+
+      .arrow {
+        margin-left: 0.3rem;
+        color: wheat;
+        transition: all 0.5s ease-out;
+      }
+    }
+
+    .hero-product {
+      z-index: 1;
+      flex: 2.8;
+      // background-color: tomato;
+
+      .trend-product img {
+        max-width: 90%;
+        height: auto; /* Maintain aspect ratio */
+      }
+    }
+
+    .feature-product {
+      gap: 0.4rem;
+      padding: 0.3rem 0 1.6rem 0;
+      flex: 1;
+      z-index: 2;
+      // background-color: red;
+
+      .product-list {
+        border-radius: 16px;
+        // background-color: red;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: rgb(24, 27, 34);
+        background: radial-gradient(
+          circle,
+          rgba(24, 27, 34, 1) 0%,
+          rgba(0, 0, 0, 1) 100%
+        );
+        padding: 0.8rem 0;
+        color: white;
+
+        .product-image {
+          flex: 1;
+          border-radius: 0.3rem;
+          //  width: 90%;
+          margin: auto;
+          //  background-color: green;
+          padding-bottom: 0.2rem;
+        }
+
+        .product-image img {
+          margin: auto;
+          max-width: 60%;
+          object-fit: cover;
+          max-height: 100%; /* Maintain aspect ratio */
+        }
+
+        .product-details {
+          flex: 1;
+          margin: auto;
+          padding: 0.3rem;
+          .prodcut-title {
+            h2 {
+              font-size: $font-size-small;
+              font-weight: 400;
+              padding-top: 0.2rem;
+            }
+
+            p {
+              font-size: 0.6rem;
+              padding: 0.1rem 0;
+            }
+          }
+
+          .rating {
+            justify-content: flex-start;
+            font-size: $font-size-small;
+          }
+
+          .price-container {
+            justify-content: flex-start;
+            // background-color: red;
+            gap: 1.5rem;
+
+            .price {
+              font-size: $font-size-p;
+              font-weight: 500;
+            }
+
+            .product-btn button {
+              background-color: $accent-400;
+              vertical-align: middle;
+              padding: 0.5rem 1rem;
+              border-radius: 0.2rem;
+              color: $text-100;
+              font-size: $font-size-small;
+              @include transition-hover();
+              &:hover {
+                @include hover();
+              }
+              i {
+                color: $text-100;
+                margin-left: 0.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

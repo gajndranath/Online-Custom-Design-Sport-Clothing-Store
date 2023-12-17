@@ -1,0 +1,124 @@
+@mixin flex($direction) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+  }
+
+  @mixin background-image($size){
+    background-size: $size;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @mixin position( $top, $right, $bottom, $left){
+    top: $top;
+    right: $right;
+    $bottom: $bottom;
+    $left: $left;
+  }
+  
+  @mixin center() {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @mixin center-left() {
+    top: 50%;
+    left: 1%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @mixin center-right() {
+    top: 50%;
+    right: 1%;
+    transform: translate(-50%, -50%);
+  }
+
+  @mixin pointer () {
+    pointer-events: none;
+  }
+  
+  .active {
+    color: $accent-400;
+  }
+  
+  .icon {
+    color: $accent-100;
+    vertical-align: middle;
+  }
+  
+  button {
+    background-color: transparent;
+    border: 0;
+  }
+  
+  .flex-row {
+    @include flex(row);
+  }
+  
+  .flex-col {
+    @include flex(column);
+  }
+  
+  .flex-1 {
+    flex: 1;
+  }
+  
+  .none {
+    display: none;
+  }
+  
+  .block {
+    display: block;
+  }
+  
+  .relative {
+    position: relative;
+  }
+  
+  .absolute {
+    position: absolute;
+  }
+  
+  .center {
+    @include center();
+  }
+  
+  .btn {
+    color: $text-100;
+    cursor: pointer;
+    font-family: "poppins", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+  
+    &:hover > .arrow {
+      color: $accent-400;
+      transform: translateX(10px);
+    }
+  
+    &:not(:hover) > .arrow {
+      transform: translateX(0);
+    }
+  
+    i {
+      margin-left: 0.3rem;
+      color: wheat;
+      transition: all 0.5s ease-out;
+    }
+  }
+  
+  .section-heading {
+    color: $accent-400;
+    font-size: $font-size-h1;
+  }
+  
+  .section-content {
+    color: $text-100;
+    font-size: $font-size-small;
+    text-align: justify;
+  }
+  
+
+  

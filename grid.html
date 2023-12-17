@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            min-height: 100vh;
+  scroll-behavior: smooth;
+  background: rgb(26,31,43);
+  background: radial-gradient(circle, rgba(26,31,43,1) 0%, rgba(0,0,0,1) 100%);
+  text-rendering: optimizeSpeed;
+  color: white;
+  font-family: 'poppins', sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  min-block-size: 100%;
+        }
+        img{
+            display: block;
+            width: 100%;
+        }
+        .grid{
+            display: grid;
+            height: 100vh;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .item-image {
+            
+            width: 100%;
+            /* background-color: blue; */
+        }
+        .item-image > img {
+            max-width: 70%;
+            margin: auto;
+        }
+
+        .item1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: red; */
+        }
+        .item2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: blue; */
+        }
+        .item3{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: greenyellow; */
+        }
+        .item4{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: brown; */
+        }
+        .item5{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: gold; */
+        }
+        .item6{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: tomato; */
+        }
+    </style>
+</head>
+<body>
+    <section class="grid">
+        <div class="item1">
+            <div class="item-inner">
+                <div class="item-image">
+                    <img src="/assets/img/wepik-export-20231002153723q0tx.png" alt="">
+                </div>
+            </div>
+            
+        </div>
+        <div class="item2">
+            <div class="item-inner">
+                <div class="item-content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae perferendis cum in cumque voluptates. Pariatur, molestiae!</p>
+                </div>
+            </div>
+        </div>
+        <div class="item3">
+            <div class="item-image">
+                <img src="/assets/img/wepik-export-20231002154309wHe8.png" alt="">
+            </div>
+        </div>
+        <div class="item4">
+            <div class="item-inner">
+                <div class="item-content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae perferendis cum in cumque voluptates. Pariatur, molestiae!</p>
+                </div>
+            </div>
+        </div>
+        <div class="item5">
+            <div class="item-image">
+                <img src="/assets/img/wepik-export-20231002155041jJZv.png" alt="">
+            </div>
+        </div>
+        <div class="item6">
+            <div class="item-inner">
+                <div class="item-content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae perferendis cum in cumque voluptates. Pariatur, molestiae!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>l

@@ -1,0 +1,110 @@
+.banner{
+    color: $text-100;
+    position: relative;
+    background-color: black;
+    .inner-banner{
+        max-width: 100%;
+        text-align: center;
+        padding: 2rem 0;
+        // background-color: red;
+
+        .banner-images{
+            margin: 3rem;
+            padding: 1rem;
+            width: 10%;
+            // background-color: blue;
+            
+            // .cross{
+            //     transition: all 3s ease-in-out;
+            //     animation: rotate 5s ease-in-out 250ms alternate-reverse both infinite;
+            // }
+
+            // @keyframes rotate {
+            //     0%{
+            //         rotate: (0);
+            //     }
+
+            //     25%{
+            //         rotate: (45deg);
+            //     }
+
+            //     50%{
+            //         rotate: (45deg);
+            //     }
+
+            //     75%{
+            //         rotate: (-45deg);
+            //     }
+
+            //     100%{
+            //         rotate: (0deg);
+            //     }
+            // }
+            svg{
+                aspect-ratio: 1/1;
+            }
+
+            .paint-line{
+                rotate: (-18deg);
+            }
+
+            .down{
+                rotate: (161deg);
+            }
+        }
+
+        .banner-content{
+            // background-color: green;
+            .sponser{
+                font-size: $font-size-small;
+                color: $text-200;
+                font-weight: 400;
+            }
+        
+            .banner-logo{
+                font-family: 'supremeregular',sans-serif;
+                color: white;
+                padding: .5rem 0;
+                font-size: $font-size-h1;
+                letter-spacing: 6px;
+                text-shadow: #bd1235 -4px 1px, skyblue 1px 1px;
+                span{
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .scroll{
+        position: absolute;
+        bottom: 5%;
+        font-size: 0.8rem;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        animation: updown 0.9s ease-in-out 250ms alternate-reverse both infinite;
+    }
+
+    .scroll-down-left{
+        @include center-left();
+        @extend .scroll;
+        /* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+
+        
+    }
+
+    .scroll-down-right{
+        @include center-right();
+        @extend .scroll;
+    }
+
+    @keyframes updown {
+        0%{
+            transform: translateY(-20%);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+}
+
